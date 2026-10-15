@@ -1,0 +1,2 @@
+# Aura
+Personal AI Manager
