@@ -1,0 +1,45 @@
+/* Topbar */
+.topbar {
+  height: 60px;
+  background: #14141a;
+  /*border-bottom: 1px solid #1f1f25;*/
+  display: flex;
+  align-items: center;
+  /*padding: 0 20px;
+  font-size: 18px;*/
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 3px solid; /* cor dinâmica */
+}
+
+/* Ícone */
+.topbar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*color: #6ecbff; /* azul claro igual ao título da sidebar */
+}
+
+.topbar-title {
+  font-size: 28px;
+  font-weight: bold;
+  color:  #ffffff; /* branco */ 
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.topbar-subtitle {
+  font-size: 30px;
+  /*color: #6ecbff;  azul claro */
+  opacity: 0.8;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px; /* espaço entre título e subtítulo */
+}
+
+.topbar-info {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+

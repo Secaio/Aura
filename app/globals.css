@@ -1,0 +1,159 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f0f14;
+  color: #e5e5e5;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  /*margin-left: 240px; /* largura da sidebar */
+/* padding: 20px;  */
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat window */
+.chat-window {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  padding-top: 20px; /* espaço para o topbar */
+  behavior: "smooth";
+}
+
+.chat-message {
+  background: #1a1a1f;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  max-width: 70%;
+
+}
+
+.chat-message.user {
+  background: #4f46e5;
+  margin-left: auto;
+  color: white;
+}
+
+.chat-input {
+  display: flex;
+  padding: 20px;
+  border-top: 1px solid #1f1f25;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #1f1f25;
+  color: #e5e5e5;
+}
+
+.chat-input button {
+  margin-left: 10px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  cursor: pointer;
+}
+
+/* ============================
+   Conversas Page
+   ============================ */
+
+.conversa-page {
+  padding: 20px;
+}
+
+.conversa-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.conversa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.conversa-card {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+}
+
+.conversa-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.conversa-edit-btn {
+  background: #4caf50;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+}
+
+.conversa-delete-btn {
+  background: #e53935;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+}
+
+
+/* Ajuste de altura para mobile */
+@media (max-width: 768px) {
+  .main {
+    height: calc(100vh - 90px); /* reduz um pouco a altura total */
+    overflow-y: auto;           /* permite rolar se necessário */
+    padding-bottom: 50px;       /* espaço extra para o input do chat */
+    
+  }
+
+  .topbar {
+    position: fixed;
+    top: 0;
+    left: 40px;
+    right: 0;
+
+    height: 50px;
+    z-index: 999;
+
+    background: #1a1a1a;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .chat-input {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+}

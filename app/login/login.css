@@ -1,0 +1,108 @@
+/* Tela inteira */
+.login-wrapper {
+  height: 100vh;
+  width: 100%;
+  background: #0a0a0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(circle at top, #111 0%, #000 70%);
+}
+
+/* Caixa central */
+.login-box {
+  width: 380px;
+  background: rgba(20, 20, 20, 0.9);
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 0 40px rgba(0, 150, 255, 0.15);
+  border: 1px solid rgba(0, 150, 255, 0.2);
+  text-align: center;
+}
+
+/* Título */
+.login-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #4fc3f7;
+  margin-bottom: 6px;
+}
+
+/* Subtítulo */
+.login-subtitle {
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+/* Labels */
+.login-label {
+  text-align: left;
+  display: block;
+  color: #aaa;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+/* Inputs */
+.login-input {
+  width: 100%;
+  padding: 12px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 14px;
+  transition: border 0.2s ease;
+}
+
+.login-input:focus {
+  border-color: #4fc3f7;
+  outline: none;
+}
+
+/* Botão */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2196f3;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #1e88e5;
+}
+
+/* Status */
+.login-status {
+  margin-top: 25px;
+  font-size: 13px;
+  color: #8bc34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background: #8bc34a;
+  border-radius: 50%;
+}
+
+/* Versão */
+.login-version {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #666;
+  opacity: 0.6;
+}

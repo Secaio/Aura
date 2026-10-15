@@ -1,0 +1,133 @@
+.phodex-layout {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* impede scroll lateral */
+  padding: 0 10px; /* evita estourar no mobile */
+  box-sizing: border-box;
+}
+
+.phodex-title {
+  font-size: 32px;
+  color: #4fc3f7;
+}
+
+.phodex-subtitle {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.ide-container {
+  background: #0d0d0d;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 10px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ide-output {
+  flex: 1;
+  overflow-y: auto;
+  background: #111;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.msg-user {
+  background: #1e1e1e;
+  padding: 10px;
+  border-left: 4px solid #4fc3f7;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.msg-assistant {
+  background: #1a1a1a;
+  padding: 10px;
+  border-left: 4px solid #66ff99;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.code-block {
+  font-family: "JetBrains Mono", monospace;
+  white-space: pre-wrap;
+  font-size: 14px;
+  color: #c7c7c7;
+}
+
+.ide-input-box {
+  display: flex;
+  gap: 10px;
+}
+
+.ide-input {
+  flex: 1;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 10px;
+  color: #fff;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.ide-send {
+  background: #22c55e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* ================================
+   MOBILE-SPECIFIC
+   ================================ */
+@media (max-width: 768px) {
+  .phodex-layout {
+    padding: 10px;
+
+  }
+
+  .ide-container {
+    padding: 0;
+
+  }
+
+  .ide-output {
+    padding: 0;
+  }
+
+  .code-block {
+    font-size: 14px; /* reduz fonte no mobile */
+  }
+
+  .ide-input {
+    font-size: 14px;
+    min-height: 120px;
+    
+  }
+
+  .ide-send {
+  padding: 2px 4px;
+  border-radius: 6px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  max-height: 120px;
+}
+
+  .ide-input-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    padding: 0px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+
+}

@@ -1,0 +1,180 @@
+.memory-container {
+  padding: 20px;
+  color: white;
+
+}
+
+.memory-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #6ecbff;
+  margin-top: 30px;
+}
+
+.memory-subtitle {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.memory-filter-box {
+  margin-bottom: 20px;
+}
+
+.memory-filter-input {
+  width: 100%;
+  padding: 10px;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  color: white;
+}
+
+.memory-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.memory-table th {
+  text-align: left;
+  padding: 12px;
+  background: #222;
+  color: #6ecbff;
+  font-size: 14px;
+}
+
+.memory-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 14px;
+}
+
+.memory-edit-area {
+  width: 100%;
+  height: 80px;
+  background: #111;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.memory-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 13px;
+
+}
+
+.memory-btn.new {
+  background: #2196f3;
+  color: white;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.memory-btn.edit {
+  background: #4caf50;
+  width: 70px;
+}
+
+.memory-btn.delete {
+  background: #e53935;
+  color: white;
+  width: 70px;
+}
+
+.memory-btn.save {
+  /*background: #2196f3;*/
+  background: #4caf50;
+  color: white;
+}
+
+.memory-btn.cancel {
+ /* background: #757575;*/
+  background: #f44336;
+  color: white; 
+}
+
+.memory-pagination {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+  z-index: 999;
+}
+
+.modal-box {
+  background: #222;
+  padding: 25px;
+  width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.2);
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-box h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.modal-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.desktop-only {
+  display: table-cell;
+}
+
+/* MOBILE: esconder colunas extras */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+  .memory-btn.delete {
+  margin-top: 5px;
+}
+}

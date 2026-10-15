@@ -1,0 +1,85 @@
+/* Layout geral */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 90vh;
+  background: radial-gradient(circle at center, #0a0a0f, #000);
+  color: #fff;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #4fc3f7;
+}
+
+.main-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #b3e5fc;
+}
+
+/* GRID dos cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 25px;
+  margin-top: 2rem;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Card */
+.ai-card {
+  background: #111;
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #222;
+}
+
+.ai-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #4fc3f7;
+}
+
+/* Avatar dentro do card */
+.ai-avatar-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.ai-avatar-image {
+  border-radius: 20%;
+}
+
+/* Títulos dos cards */
+.ai-card-title {
+  font-size: 1.3rem;
+  color: #4fc3f7;
+  margin-bottom: 5px;
+}
+
+.ai-card-subtitle {
+  font-size: 0.9rem;
+  color: #90caf9;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

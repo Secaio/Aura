@@ -1,0 +1,99 @@
+/* Toggle button (mobile) */
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1100;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sidebar container (desktop padrão) */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* HEADER */
+.sidebar-header {
+  margin: 20px;
+
+}
+
+.sidebar-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #6ecbff; /* azul claro */
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+.sidebar-subtitle {
+  font-size: 12px;
+  color: #ffffff;
+  opacity: 0.8;
+  margin-top: -4px;
+}
+
+/* Mobile: sidebar escondida e toggle visível */
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px; /* escondida fora da tela */
+    width: 260px;
+    height: 100vh;
+    background: #111;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .sidebar.open {
+    left: 0; /* desliza para dentro */
+  }
+}
+
+/* Botões do menu */
+.menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  color:  white;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+/* Ícone */
+.menu-btn .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover */
+.menu-btn:hover {
+  background: #222;
+}
+
+/* Botão selecionado */
+.menu-btn.selected {
+  background: #333;
+  color: #66BB6A; /* verde claro */
+}

@@ -1,0 +1,155 @@
+/* Container principal */
+.conversa-container {
+  padding: 20px;
+  width: 100%;
+}
+
+.conversa-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #6ecbff;
+  margin-top: 30px;
+}
+
+.conversa-subtitle {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+/* Filtro */
+.conversa-filter-box {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.conversa-filter-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  background: #1e1e1e;
+  color: white;
+  border: 1px solid #333;
+}
+
+/* GRID FULL WIDTH */
+.conversa-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.conversa-row {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  background: #1e1e1e;
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  align-items: center;
+  width: 100%;
+}
+
+.col-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.col-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* Botões */
+.btn-load {
+  background: #007bff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+}
+
+.btn-edit {
+  background: #4caf50;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+}
+
+.btn-delete {
+  background: #e53935;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+}
+
+/* Paginação */
+.conversa-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Modal */
+.conversa-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conversa-modal-box {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+}
+
+.conversa-modal-input {
+  width: 100%;
+  padding: 10px;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: white;
+}
+
+.conversa-modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.btn-save {
+  background: #4caf50;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+}
+
+.btn-cancel {
+  background: #777;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .conversa-row {
+    grid-template-columns: 1fr auto;
+  }
+
+  .btn-load,
+  .btn-edit,
+  .btn-delete {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .col-actions {
+    gap: 6px;
+  }
+}

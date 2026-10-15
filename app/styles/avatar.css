@@ -1,0 +1,771 @@
+*  {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+
+html,
+body {
+width: 100%;
+height: 100%;
+}
+
+body {
+background:
+radial-gradient(
+circle at center,
+#151b2d 0%,
+#090c15 45%,
+#030408 100%
+);
+
+
+color: white;
+
+font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+overflow: hidden;
+
+
+}
+
+/* =========================================================
+APP
+========================================================= */
+
+.app {
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+
+justify-content: center;
+align-items: center;
+
+gap: 35px;
+
+}
+
+/* =========================================================
+AVATAR
+========================================================= */
+
+.avatar-container {
+
+display: flex;
+flex-direction: column;
+align-items: center;
+
+margin-top: 200px;
+
+gap: 20px;
+
+
+}
+
+.avatar {
+width: min(70vw, 520px);
+height: min(70vw, 520px);
+
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+transition:
+    transform 0.8s ease,
+    filter 0.8s ease;
+
+
+}
+
+#transcription {
+    width: 80%;
+    max-width: 700px;
+
+    margin: 30px auto 0;
+
+    padding: 16px 20px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 12px;
+
+    min-height: 24px;
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+SVG
+========================================================= */
+
+.robot-face {
+width: 100%;
+height: 100%;
+
+
+overflow: visible;
+
+
+}
+
+/* =========================================================
+GLOW
+========================================================= */
+
+.avatar-glow {
+fill: none;
+
+
+stroke: rgba(90, 180, 255, 0.08);
+
+stroke-width: 20;
+
+filter: blur(12px);
+
+transition:
+    stroke 0.5s ease,
+    opacity 0.5s ease;
+
+
+}
+
+/* =========================================================
+CABEÇA
+========================================================= */
+
+.head {
+fill: #101522;
+
+
+stroke: #46536d;
+
+stroke-width: 5;
+
+transition:
+    stroke 0.5s ease,
+    filter 0.5s ease;
+
+
+}
+
+/* =========================================================
+ORELHAS
+========================================================= */
+
+.ear {
+fill: #1b2333;
+
+
+stroke: #46536d;
+
+stroke-width: 4;
+
+
+}
+
+/* =========================================================
+OLHOS
+========================================================= */
+
+.eye {
+transform-box: fill-box;
+transform-origin: center;
+
+
+transition:
+    transform 0.5s ease;
+
+
+}
+
+.eye-outer {
+fill: #182238;
+
+
+stroke: #617b9e;
+
+stroke-width: 4;
+
+transition:
+    fill 0.5s ease,
+    stroke 0.5s ease;
+
+
+}
+
+.eye-core {
+fill: #75c9ff;
+
+
+filter:
+    drop-shadow(0 0 8px rgba(90, 190, 255, 0.9));
+
+transition:
+    fill 0.5s ease,
+    transform 0.3s ease;
+
+
+}
+
+.eye-highlight {
+fill: white;
+
+
+opacity: 0.8;
+
+
+}
+
+/* =========================================================
+SENSOR
+========================================================= */
+
+.sensor {
+fill: #75c9ff;
+
+
+filter:
+    drop-shadow(0 0 8px rgba(90, 190, 255, 0.9));
+
+transition:
+    fill 0.5s ease,
+    transform 0.5s ease;
+
+
+}
+
+/* =========================================================
+BOCA
+========================================================= */
+
+.mouth-frame {
+fill: #0a0e18;
+
+
+stroke: #4e607c;
+
+stroke-width: 4;
+
+
+}
+
+.mouth-line {
+fill: none;
+
+
+stroke: #75c9ff;
+
+stroke-width: 6;
+
+stroke-linecap: round;
+
+filter:
+    drop-shadow(0 0 5px rgba(90, 190, 255, 0.7));
+
+transition:
+    d 0.2s ease;
+
+
+}
+
+/* =========================================================
+STATUS LIGHTS
+========================================================= */
+
+.status-light {
+fill: #4b6685;
+
+
+transition:
+    fill 0.4s ease,
+    filter 0.4s ease;
+
+
+}
+
+/* =========================================================
+STATUS
+========================================================= */
+
+.state-display {
+display: flex;
+
+
+flex-direction: column;
+
+align-items: center;
+
+gap: 5px;
+
+font-size: 11px;
+
+letter-spacing: 3px;
+
+opacity: 0.7;
+
+
+}
+
+.state-display strong {
+font-size: 15px;
+
+
+letter-spacing: 4px;
+
+color: #75c9ff;
+
+transition:
+    color 0.4s ease;
+
+
+}
+
+/* =========================================================
+CONTROLES
+========================================================= */
+
+.controls {
+display: flex;
+
+
+gap: 10px;
+
+flex-wrap: wrap;
+
+justify-content: center;
+
+
+}
+
+.controls button {
+background: rgba(20, 28, 45, 0.9);
+
+
+border: 1px solid #34435c;
+
+color: #9fb4ce;
+
+padding: 10px 18px;
+
+border-radius: 8px;
+
+cursor: pointer;
+
+font-size: 12px;
+
+letter-spacing: 1px;
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+
+
+}
+
+.controls button:hover {
+background: #1b263a;
+
+
+border-color: #75c9ff;
+
+color: white;
+
+transform: translateY(-2px);
+
+
+}
+
+/* =========================================================
+IDLE
+========================================================= */
+
+.avatar.idle {
+animation: breathing 4s ease-in-out infinite;
+}
+
+.avatar.idle .avatar-glow {
+animation: idleGlow 4s ease-in-out infinite;
+}
+
+.avatar.idle .eye {
+animation: blink 5s infinite;
+}
+
+.avatar.idle .status-light {
+animation: idleLights 3s ease-in-out infinite;
+}
+
+/* =========================================================
+LISTENING
+========================================================= */
+
+.avatar.listening {
+transform: rotate(-2deg) scale(1.03);
+}
+
+.avatar.listening .avatar-glow {
+stroke: rgba(90, 200, 255, 0.3);
+
+
+opacity: 1;
+
+animation: listeningGlow 1.5s ease-in-out infinite;
+
+
+}
+
+.avatar.listening .eye-core {
+transform: scale(1.25);
+}
+
+.avatar.listening .eye-outer {
+fill: #1c304c;
+
+
+stroke: #75c9ff;
+
+
+}
+
+.avatar.listening .sensor {
+animation: sensorPulse 1s ease-in-out infinite;
+}
+
+.avatar.listening .status-light {
+fill: #75c9ff;
+
+
+filter:
+    drop-shadow(0 0 8px rgba(90, 190, 255, 0.9));
+
+
+}
+
+/* =========================================================
+THINKING
+========================================================= */
+
+.avatar.thinking {
+transform: scale(1.02);
+animation:
+        avatarThinking
+        1.5s ease-in-out infinite;
+}
+@keyframes avatarThinking {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.025);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.avatar.thinking .avatar-glow {
+stroke: rgba(180, 130, 255, 0.3);
+
+
+animation: thinkingGlow 1.8s ease-in-out infinite;
+
+
+}
+
+.avatar.thinking .eye-core {
+fill: #b58cff;
+
+
+animation: thinkingEyes 1.2s ease-in-out infinite;
+
+
+}
+
+.avatar.thinking .left-eye,
+.avatar.thinking .right-eye {
+    animation:
+        eyeThinking
+        1s ease-in-out infinite alternate;
+}
+
+@keyframes eyeThinking {
+
+    from {
+        opacity: 0.65;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.avatar.thinking .sensor {
+fill: #b58cff;
+
+
+animation: thinkingSensor 1.2s ease-in-out infinite;
+
+
+}
+
+.avatar.thinking .status-light {
+fill: #b58cff;
+
+
+animation: thinkingLights 1s ease-in-out infinite;
+
+
+}
+
+/* =========================================================
+SPEAKING
+========================================================= */
+
+.avatar.speaking {
+transform: scale(1.04);
+}
+
+.avatar.speaking .avatar-glow {
+stroke: rgba(100, 220, 180, 0.35);
+
+
+animation: speakingGlow 0.8s ease-in-out infinite;
+
+
+}
+
+.avatar.speaking .eye-core {
+fill: #79e8c2;
+}
+
+.avatar.speaking .sensor {
+fill: #79e8c2;
+}
+
+.avatar.speaking .status-light {
+fill: #79e8c2;
+
+
+filter:
+    drop-shadow(0 0 8px rgba(100, 230, 190, 0.8));
+
+
+}
+
+
+/* =========================================================
+ANIMAÇÕES
+========================================================= */
+
+@keyframes breathing {
+
+
+0%,
+100% {
+    transform: scale(1);
+}
+
+50% {
+    transform: scale(1.015);
+}
+
+
+}
+
+@keyframes idleGlow {
+
+
+0%,
+100% {
+    opacity: 0.5;
+}
+
+50% {
+    opacity: 1;
+}
+
+
+}
+
+@keyframes blink {
+
+
+0%,
+94%,
+100% {
+    transform: scaleY(1);
+}
+
+96% {
+    transform: scaleY(0.08);
+}
+
+
+}
+
+@keyframes idleLights {
+
+
+0%,
+100% {
+    opacity: 0.4;
+}
+
+50% {
+    opacity: 0.9;
+}
+
+
+}
+
+@keyframes listeningGlow {
+
+
+0%,
+100% {
+    opacity: 0.5;
+}
+
+50% {
+    opacity: 1;
+}
+
+
+}
+
+@keyframes sensorPulse {
+
+
+0%,
+100% {
+    transform: scale(1);
+}
+
+50% {
+    transform: scale(1.4);
+}
+
+
+}
+
+@keyframes thinkingGlow {
+
+
+0%,
+100% {
+    opacity: 0.4;
+}
+
+50% {
+    opacity: 1;
+}
+
+
+}
+
+@keyframes thinkingEyes {
+
+
+0%,
+100% {
+    transform: translateX(-5px);
+}
+
+50% {
+    transform: translateX(5px);
+}
+
+
+}
+
+@keyframes thinkingSensor {
+
+
+0%,
+100% {
+    transform: scale(0.8);
+}
+
+50% {
+    transform: scale(1.4);
+}
+
+
+}
+
+@keyframes thinkingLights {
+
+
+0% {
+    opacity: 0.2;
+}
+
+50% {
+    opacity: 1;
+}
+
+100% {
+    opacity: 0.2;
+}
+
+
+}
+
+@keyframes speakingGlow {
+
+
+0%,
+100% {
+    opacity: 0.5;
+}
+
+50% {
+    opacity: 1;
+}
+
+
+}
+
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+
+.avatar {
+    width: 85vw;
+    height: 85vw;
+}
+
+.controls {
+    max-width: 340px;
+}
+
+.controls button {
+    padding: 9px 13px;
+}
+
+
+}
